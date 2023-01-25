@@ -1,0 +1,25 @@
+/*
+* Converts # of ounces into the max amount of quarts, cups, and then remaining ounces.
+*/
+#include <iostream>
+using namespace std;
+ 
+int main() {
+   int totalOunces;
+   int numQuarts;
+   int numCups;
+   int numOunces;
+   
+   cout << "Enter in the amount of ounces you have: ";
+   cin >> totalOunces;
+   
+   numQuarts = totalOunces / 32;
+   numCups = (totalOunces % 32) / 8;
+   numOunces = ((totalOunces % 32) % 8);
+
+   cout << "Quarts: " << numQuarts << endl;
+   cout << "Cups: " << numCups << endl;
+   cout << "Ounces: " << numOunces << endl;
+ 
+   return 0;
+}
